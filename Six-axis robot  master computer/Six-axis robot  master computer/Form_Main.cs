@@ -7,15 +7,33 @@ using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Six_axis_robot__master_computer
 {
     public partial class Form_Main : Form
     {
+        /////////////////////////////////////////////////////
+        Double X_pianyi = 0;
+        Double Y_pianyi = 0;
+        Double Z_pianyi = 0;
+        Double E0_pianyi = 0;
+        Double E1_pianyi = 0;
+        Double Jia_pianyi = 0;
+        Double X_shangci= 0;
+        Double Y_shangci = 0;
+        Double Z_shangci = 0;
+        Double E0_shangci = 0;
+        Double E1_shangci = 0;
+        Double Tingzhi = 0;
+        /////////////////////////////////////////////////////
+
+
         public Form_Main()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,7 +87,7 @@ namespace Six_axis_robot__master_computer
                 file = dialog.FileName;
             }
             Read(file);
-
+            MessageBox.Show("控制文件导入成功");
         }
 
         //导入控制文件中Read的调用
@@ -83,8 +101,7 @@ namespace Six_axis_robot__master_computer
                 {
                     Console.WriteLine(line.ToString());
                     textBox_Daoru.AppendText(line);
-                    textBox_Daoru.AppendText(Environment.NewLine);
-                    MessageBox.Show("控制文件导入成功");
+                    textBox_Daoru.AppendText(Environment.NewLine);                 
                 }
             }
             catch
@@ -432,7 +449,7 @@ namespace Six_axis_robot__master_computer
 
             Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), 0.1);
         }
-        //x,1
+        //x,1 
         private void button25_Click(object sender, EventArgs e)
         {
             Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), 1);
@@ -699,6 +716,7 @@ namespace Six_axis_robot__master_computer
                 serialPort1.WriteLine(Jia);    //串口写入数据         
                 this.textBox_zhukong.AppendText(Jia);
                 label_Jiaqu.Text = "夹取中";
+                Jia_pianyi = 1;
             }
         }
         //放开命令
@@ -715,6 +733,7 @@ namespace Six_axis_robot__master_computer
                 serialPort1.WriteLine(Fang);    //串口写入数据         
                 this.textBox_zhukong.AppendText(Fang);
                 label_Jiaqu.Text = "未夹取";
+                Jia_pianyi = 0;
             }
         }
         //STOP
@@ -727,6 +746,7 @@ namespace Six_axis_robot__master_computer
             }
             else
             {
+                Tingzhi = 1;
                 string STOP = "M18\r\n";
                 serialPort1.WriteLine(STOP);    //串口写入数据         
                 this.textBox_zhukong.AppendText(STOP);
@@ -838,23 +858,88 @@ namespace Six_axis_robot__master_computer
         //记录机械臂位置
         private void button69_Click(object sender, EventArgs e)
         {
+            JiluXYZ();
+            JiluE0E1();
 
         }
         //记录夹具状态
         private void button22_Click_1(object sender, EventArgs e)
         {
-
+            Jilu_Jiaju();
         }
+
         int P = 0;
-        private void Jilu(string Bufen)
+        private void JiluXYZ()
         {
-            P+=1;
-            this.textBox_Daochu.AppendText("[G228#"+P+"]");
-            string Weizhi=
+            P += 1;
+            X_pianyi = Convert.ToDouble(label_Weizhi_X.Text) - X_shangci;
+            Y_pianyi = Convert.ToDouble(label_Weizhi_Y.Text) - Y_shangci;
+            Z_pianyi = Convert.ToDouble(label_Weizhi_Z.Text) - Z_shangci;
+            
+            this.textBox_Daochu.AppendText(";[G228#"+P+"]");
+            string Weizhi = "G91\r\n" + "G1" + " " + "X" +X_pianyi + " " + "Y" + Y_pianyi + " " + "Z" + Z_pianyi + " " + "F" + "1000";
+            textBox_Daochu.AppendText(Weizhi);
+            textBox_Daochu.AppendText(Environment.NewLine);
 
-
+            X_shangci = Convert.ToDouble(label_Weizhi_X.Text);
+            Y_shangci = Convert.ToDouble(label_Weizhi_Y.Text);
+            Z_shangci = Convert.ToDouble(label_Weizhi_Z.Text);
         }
+
+        private void JiluE0E1()
+        {
+            P += 1;
+            E0_pianyi = Convert.ToDouble(label_Weizhi_E0.Text) - E0_shangci;
+            E1_pianyi = Convert.ToDouble(label_Weizhi_E1.Text) - E1_shangci;
+
+            this.textBox_Daochu.AppendText(";[G228#" + P + "]");
+            textBox_Daochu.AppendText(Environment.NewLine);
+            string Weizhi = "T0\r\n" + "G91\r\n" + "G1 " + "E" + E0_pianyi + " " + "F" + "1000";
+            textBox_Daochu.AppendText(Weizhi);
+            textBox_Daochu.AppendText(Environment.NewLine);
+            Weizhi = "T1\r\n" + "G91\r\n" + "G1 " + "E" + E1_pianyi + " " + "F" + "1000";
+            textBox_Daochu.AppendText(Weizhi);
+            textBox_Daochu.AppendText(Environment.NewLine);
+
+            E0_shangci = Convert.ToDouble(label_Weizhi_E0.Text);
+            E1_shangci = Convert.ToDouble(label_Weizhi_E1.Text);
+        }
+
+        private void Jilu_Jiaju()
+        {
+            P += 1;
+            this.textBox_Daochu.AppendText(";[G228#" + P + "]");
+            textBox_Daochu.AppendText(Environment.NewLine);
+            if (Jia_pianyi ==0)
+            {
+                textBox_Daochu.AppendText("M280 P0 S0\r\n"); 
+            }
+            else
+            {
+                textBox_Daochu.AppendText("M280 P0 S80\r\n"); 
+            }
+        }
+
+
+        private void button23_Click_1(object sender, EventArgs e)
+        {
+            Zhixing();
+        }
+
+        private void Zhixing()
+        {
+            foreach (string s in textBox_Daoru.Lines)
+            {
+ 
+                    serialPort1.WriteLine(s);    //写入数据
+                    this.textBox_zhukong.Text += s + "\r\n";
+                    System.Threading.Thread.Sleep(3000);
+                
+            }
+        }
+
 
     }
+
 
 }
