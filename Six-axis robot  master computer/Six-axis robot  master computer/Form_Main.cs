@@ -27,6 +27,17 @@ namespace Six_axis_robot__master_computer
         Double E0_shangci = 0;
         Double E1_shangci = 0;
         Double Tingzhi = 0;
+
+        int Xianwei_X_max = 0;  //X最高软限位
+        int Xianwei_Y_max = 0;  //Y最高软限位
+        int Xianwei_Z_max = 0;  //Z最高软限位
+        int Xianwei_E0_max = 0;  //E0最高软限位
+        int Xianwei_E1_max = 0;  //E1最高软限位
+        int Xianwei_X_min = 0;  //X最低软限位
+        int Xianwei_Y_min = 0;  //Y最低软限位
+        int Xianwei_Z_min = 0;  //Z最低软限位
+        int Xianwei_E0_min = 0;  //E0最低软限位
+        int Xianwei_E1_min = 0;  //E1最低软限位
         /////////////////////////////////////////////////////
 
 
@@ -59,6 +70,16 @@ namespace Six_axis_robot__master_computer
         //导出控制文件
         private void button71_Click(object sender, EventArgs e)
         {
+            Double X_jieshu = -Convert.ToDouble(label_Weizhi_X.Text);
+            Double Y_jieshu = -Convert.ToDouble(label_Weizhi_Y.Text);
+            Double Z_jieshu = -Convert.ToDouble(label_Weizhi_Z.Text);
+            this.textBox_Daochu.AppendText(";[G228#" + P + "]");
+            string Weizhi = "G90\r\n" + "G1" + " " + "X" + X_jieshu + " " + "Y" + Y_jieshu + " " + "Z" + Z_jieshu + " " + "F" + "1000";
+            textBox_Daochu.AppendText(Weizhi);
+            textBox_Daochu.AppendText(Environment.NewLine);
+
+
+
             var save = new SaveFileDialog();
             save.Filter = "输出.G228文件 (*.G228)|*.G228";
             save.FileName = "输出_" + DateTime.Now.ToString("yyyyMMddHHmmss");//年月日时分秒
@@ -261,7 +282,9 @@ namespace Six_axis_robot__master_computer
             }
             else
             {
-                serialPort1.WriteLine(textBox_Send.Text);    //写入数据
+                //serialPort1.WriteLine(textBox_Send.Text);    //写入数据，此数据没经过实时位置反馈，需走输出程序检测
+                serialPort1_shuchu(textBox_Send.Text);
+
                 this.textBox_zhukong.Text += textBox_Send.Text + "\r\n";
             }
         }
@@ -361,6 +384,7 @@ namespace Six_axis_robot__master_computer
             {
             }
         }*/
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //接收数据事件
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -380,7 +404,12 @@ namespace Six_axis_robot__master_computer
                 MessageBox.Show(error.ToString());
             }
         }
+
+
         delegate void SetTextCallback(string text);
+
+        string serialPort1_shuchu_jieshou_text =" ";
+
         private void SetData(string text)
         {
             if (this.textBox_zhukong.InvokeRequired)
@@ -392,6 +421,7 @@ namespace Six_axis_robot__master_computer
             {
                 //this.txtb_receive.Text += text+Environment.NewLine;//这种方法会多出空行
                 this.textBox_zhukong.AppendText(text);
+                serialPort1_shuchu_jieshou_text = text;
             }
         }
 
@@ -415,7 +445,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string XYZ_O = "G91\r\n" + "G0 " + XYZ + Zhi + " " + "F" + Sudu + "\r\n" + "G90\r\n" + "M114\r\n";
-                serialPort1.WriteLine(XYZ_O);    //串口写入数据         
+
+                //serialPort1.WriteLine(XYZ_O);    //串口写入数据     
+                serialPort1_shuchu(XYZ_O);
+
                 this.textBox_zhukong.AppendText(XYZ_O);
                 if (XYZ == "X")
                 {
@@ -577,7 +610,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string XYZ_O = "G28" + " " + XYZ + "0" + "\r\n" + "M114\r\n";
-                serialPort1.WriteLine(XYZ_O);    //串口写入数据         
+
+                //serialPort1.WriteLine(XYZ_O);    //串口写入数据         
+                serialPort1_shuchu(XYZ_O);
+
                 this.textBox_zhukong.AppendText(XYZ_O);
             }
         }
@@ -619,7 +655,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string T0T1_0 = T0T1 + "\r\n" + "G91\r\n" + "G1 " + "E" + Zhi + " " + "F" + Sudu + "\r\n" + "G90\r\n" + "M114\r\n";
-                serialPort1.WriteLine(T0T1_0);    //串口写入数据         
+
+                //serialPort1.WriteLine(T0T1_0);    //串口写入数据    
+                serialPort1_shuchu(T0T1_0);
+
                 this.textBox_zhukong.AppendText(T0T1_0);
                 if (T0T1 == "T0")
                 {
@@ -713,7 +752,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string Jia = "M280 P0 S80\r\n";
-                serialPort1.WriteLine(Jia);    //串口写入数据         
+
+                //serialPort1.WriteLine(Jia);    //串口写入数据  
+                serialPort1_shuchu(Jia);
+
                 this.textBox_zhukong.AppendText(Jia);
                 label_Jiaqu.Text = "夹取中";
                 Jia_pianyi = 1;
@@ -730,7 +772,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string Fang = "M280 P0 S0\r\n";
-                serialPort1.WriteLine(Fang);    //串口写入数据         
+
+                //serialPort1.WriteLine(Fang);    //串口写入数据 
+                serialPort1_shuchu(Fang);
+
                 this.textBox_zhukong.AppendText(Fang);
                 label_Jiaqu.Text = "未夹取";
                 Jia_pianyi = 0;
@@ -748,7 +793,10 @@ namespace Six_axis_robot__master_computer
             {
                 Tingzhi = 1;
                 string STOP = "M18\r\n";
-                serialPort1.WriteLine(STOP);    //串口写入数据         
+
+                //serialPort1.WriteLine(STOP);    //串口写入数据  
+                serialPort1_shuchu(STOP);
+
                 this.textBox_zhukong.AppendText(STOP);
                 label_huifu.Visible = true;
 
@@ -765,7 +813,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string Chaxun = "M114\r\n";
-                serialPort1.WriteLine(Chaxun);    //串口写入数据         
+
+                //serialPort1.WriteLine(Chaxun);    //串口写入数据   
+                serialPort1_shuchu(Chaxun);
+
                 this.textBox_zhukong.AppendText(Chaxun);
             }
         }
@@ -781,7 +832,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string XYZ_O = "G91\r\n" + "G0 " + XYZ + Zhi + " " + "F" + Sudu + "\r\n" + "G90\r\n" + "M114\r\n";
-                serialPort1.WriteLine(XYZ_O);    //串口写入数据         
+
+                //serialPort1.WriteLine(XYZ_O);    //串口写入数据        
+                serialPort1_shuchu(XYZ_O);
+
                 this.textBox_zhukong.AppendText(XYZ_O);
                 if (XYZ == "X")
                 {
@@ -809,7 +863,10 @@ namespace Six_axis_robot__master_computer
             else
             {
                 string T0T1_0 = T0T1 + "\r\n" + "G91\r\n" + "G1 " + "E" + Zhi + " " + "F" + Sudu + "\r\n" + "G90\r\n" + "M114\r\n";
-                serialPort1.WriteLine(T0T1_0);    //串口写入数据         
+
+                //serialPort1.WriteLine(T0T1_0);    //串口写入数据
+                serialPort1_shuchu(T0T1_0);
+
                 this.textBox_zhukong.AppendText(T0T1_0);
                 if (T0T1 == "T0")
                 {
@@ -877,7 +934,7 @@ namespace Six_axis_robot__master_computer
             Z_pianyi = Convert.ToDouble(label_Weizhi_Z.Text) - Z_shangci;
             
             this.textBox_Daochu.AppendText(";[G228#"+P+"]");
-            string Weizhi = "G91\r\n" + "G1" + " " + "X" +X_pianyi + " " + "Y" + Y_pianyi + " " + "Z" + Z_pianyi + " " + "F" + "1000";
+            string Weizhi = "G91\r\n" + "G1" + " " + "X" +X_pianyi + " " + "Y" + Y_pianyi + " " + "Z" + Z_pianyi + " " + "F" + "3000";
             textBox_Daochu.AppendText(Weizhi);
             textBox_Daochu.AppendText(Environment.NewLine);
 
@@ -923,22 +980,78 @@ namespace Six_axis_robot__master_computer
 
         private void button23_Click_1(object sender, EventArgs e)
         {
-            Zhixing();
+            if (!serialPort1.IsOpen) //如果没打开
+            {
+                MessageBox.Show("请先打开串口！", "Error");
+                return;
+            }
+            else
+            {
+                Zhixing();
+            }           
         }
 
         private void Zhixing()
         {
-            foreach (string s in textBox_Daoru.Lines)
+            
+           /* foreach (string s in textBox_Daoru.Lines)
             {
  
-                    serialPort1.WriteLine(s);    //写入数据
-                    this.textBox_zhukong.Text += s + "\r\n";
-                    System.Threading.Thread.Sleep(3000);
+                serialPort1.WriteLine(s);    //写入数据
+                this.textBox_zhukong.Text += s + "\r\n";
+                //System.Threading.Thread.Sleep(3000);
                 
+            }*/
+
+
+            //string Content= textBox_Daoru.Text;//读取所有导入执行信息
+            //string[] ContentLines = Content.Split(new string[] { "\r\n" }, StringSplitOptions.None);//不忽略空行
+            //string[] ContentLines = Content.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);//忽略空行
+
+            string[] str = new string[textBox_Daoru.Lines.Length];
+
+            progressBar_fasong.Maximum = textBox_Daoru.Lines.Length;//progressBar_fasong设置最大长度值
+            progressBar_fasong.Value = 0;//progressBar_fasong设置当前值
+            progressBar_fasong.Step = 1;//progressBar_fasong设置没次增长多少
+
+            for (int i = 0; i < textBox_Daoru.Lines.Length; i++)
+            {
+
+                str[i] = textBox_Daoru.Lines[i];
+                serialPort1_shuchu(str[i]);
+                for (int n = 0; n == 1; )
+                {
+                    if (serialPort1_shuchu_jieshou_text.Contains("ok"))
+                    {
+                        n = 1;
+                    }
+                }
+                this.textBox_zhukong.Text += str[i] + "\r\n";
+                progressBar_fasong.Value += progressBar_fasong.Step; //让进度条增加一次
             }
+                
+
+
         }
 
+        private void serialPort1_shuchu(string shuchu)  //串口1输出数据的检测以及发送，用于软限位的控制
+        {
+            if (Convert.ToDouble(label_Weizhi_X.Text) < Xianwei_X_max && Convert.ToDouble(label_Weizhi_Y.Text) < Xianwei_Y_max && Convert.ToDouble(label_Weizhi_Z.Text) < Xianwei_Z_max && Convert.ToDouble(label_Weizhi_E0.Text) < Xianwei_E0_max && Convert.ToDouble(label_Weizhi_E1.Text) < Xianwei_E1_max && Convert.ToDouble(label_Weizhi_X.Text) > Xianwei_X_min && Convert.ToDouble(label_Weizhi_Y.Text) > Xianwei_Y_min && Convert.ToDouble(label_Weizhi_Z.Text) > Xianwei_Z_min && Convert.ToDouble(label_Weizhi_E0.Text) > Xianwei_E0_min && Convert.ToDouble(label_Weizhi_E1.Text) > Xianwei_E1_min)
+            {
+                serialPort1.WriteLine(shuchu);
+            }
+            else
+            {
+                MessageBox.Show("超出限位！", "Error");
+            }
 
+
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

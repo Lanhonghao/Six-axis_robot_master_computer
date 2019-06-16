@@ -167,7 +167,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar_fasong = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -535,6 +535,7 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "实时位置反馈";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // label_Weizhi_E1
             // 
@@ -1659,19 +1660,19 @@
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
-            // progressBar1
+            // progressBar_fasong
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 664);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1155, 23);
-            this.progressBar1.TabIndex = 90;
+            this.progressBar_fasong.Location = new System.Drawing.Point(13, 664);
+            this.progressBar_fasong.Name = "progressBar_fasong";
+            this.progressBar_fasong.Size = new System.Drawing.Size(1155, 23);
+            this.progressBar_fasong.TabIndex = 90;
             // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 688);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.progressBar_fasong);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -1855,7 +1856,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar_fasong;
     }
 }
 
