@@ -28,16 +28,16 @@ namespace Six_axis_robot__master_computer
         Double E1_shangci = 0;
         Double Tingzhi = 0;
 
-        int Xianwei_X_max = 0;  //X最高软限位
-        int Xianwei_Y_max = 0;  //Y最高软限位
-        int Xianwei_Z_max = 0;  //Z最高软限位
-        int Xianwei_E0_max = 0;  //E0最高软限位
-        int Xianwei_E1_max = 0;  //E1最高软限位
-        int Xianwei_X_min = 0;  //X最低软限位
-        int Xianwei_Y_min = 0;  //Y最低软限位
-        int Xianwei_Z_min = 0;  //Z最低软限位
-        int Xianwei_E0_min = 0;  //E0最低软限位
-        int Xianwei_E1_min = 0;  //E1最低软限位
+        Double Xianwei_X_max = 30;  //X最高软限位
+        Double Xianwei_Y_max = 800;  //Y最高软限位
+        Double Xianwei_Z_max =10;  //Z最高软限位
+        Double Xianwei_E0_max = 2.5;  //E0最高软限位
+        Double Xianwei_E1_max = 8.0;  //E1最高软限位
+        Double Xianwei_X_min = -30;  //X最低软限位
+        Double Xianwei_Y_min = -900;  //Y最低软限位
+        Double Xianwei_Z_min = -13;  //Z最低软限位
+        Double Xianwei_E0_min = -2.5;  //E0最低软限位
+        Double Xianwei_E1_min = -7.2;  //E1最低软限位
         /////////////////////////////////////////////////////
 
 
