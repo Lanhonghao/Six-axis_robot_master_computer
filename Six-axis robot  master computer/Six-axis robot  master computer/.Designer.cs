@@ -1671,7 +1671,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 688);
+            this.ClientSize = new System.Drawing.Size(1177, 693);
             this.Controls.Add(this.progressBar_fasong);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
@@ -1684,6 +1684,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Main";
             this.Text = " MOLAB六轴机械臂上位机";
