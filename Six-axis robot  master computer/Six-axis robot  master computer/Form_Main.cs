@@ -12,9 +12,10 @@ using System.Windows.Forms;
 
 namespace Six_axis_robot__master_computer
 {
+
     public partial class Form_Main : Form
     {
-        /////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////public static
         Double X_pianyi = 0;
         Double Y_pianyi = 0;
         Double Z_pianyi = 0;
@@ -130,82 +131,10 @@ namespace Six_axis_robot__master_computer
                 MessageBox.Show("取消控制文件导入");
             }
         }
-        //全部设置为零点
-        private void button17_Click(object sender, EventArgs e)
-        {
-            textBox_X_Sheding.Text = "0";
-            textBox_Y_Sheding.Text = "0";
-            textBox_Z_Sheding.Text = "0";
-            textBox_E0_Sheding.Text = "0";
-            textBox_E1_Sheding.Text = "0";
-        }
 
-        //位置设定中加1
-        private void Jia1(TextBox textBox)
-        {
-            string text = textBox.Text;
-            Double num = Convert.ToDouble(text);
-            num += 1;
-            textBox.Text = num.ToString();
-        }
-        //位置设定中减1
-        private void Jian1(TextBox textBox)
-        {
-            string text = textBox.Text;
-            Double num = Convert.ToDouble(text);
-            num -= 1;
-            textBox.Text = num.ToString();
-        }
-        //X+1
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Jia1(textBox_X_Sheding);
-        }
-        //X-1
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Jian1(textBox_X_Sheding);
-        }
-        //Y+1
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Jia1(textBox_Y_Sheding);
-        }
-        //Y-1
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Jian1(textBox_Y_Sheding);
-        }
-        //Z+1
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Jia1(textBox_Z_Sheding);
-        }
-        //Z-1
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Jian1(textBox_Z_Sheding);
-        }
-        //E0+1
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Jia1(textBox_E0_Sheding);
-        }
-        //E0-1
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Jian1(textBox_E0_Sheding);
-        }
-        //E1+1
-        private void button11_Click(object sender, EventArgs e)
-        {
-            Jia1(textBox_E1_Sheding);
-        }
-        //E1-1
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Jian1(textBox_E1_Sheding);
-        }
+
+
+
         //扫描控制串口
         private void button20_Click(object sender, EventArgs e)
         {
@@ -480,122 +409,122 @@ namespace Six_axis_robot__master_computer
             Double Zhi = 0.1;
             Zhilin_Weizhigaibian(XYZ,Sudu,Zhi);*/
 
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), 0.1);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, 0.1);
         }
         //x,1 
         private void button25_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), 1);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, 1);
         }
         //x,10
         private void button24_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), 10);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, 10);
         }
         //x,100
         private void button23_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), 100);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, 100);
         }
         //x,-0.1
         private void button27_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), -0.1);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, -0.1);
         }
         //x,-1
         private void button28_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), -1);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, -1);
         }
         //x,-10
         private void button29_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), -10);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, -10);
         }
         //x,-100
         private void button30_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("X", Convert.ToDouble(label_X_Sudu.Text), -100);
+            Zhilin_Weizhigaibian("X", Bianliang.X_Sudu, -100);
         }
         //Y,0.1
         private void button37_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), 0.1);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, 0.1);
         }
         //Y,1
         private void button38_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), 1);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, 1);
         }
         //Y,10
         private void button39_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), 10);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, 10);
         }
         //Y,100
         private void button40_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), 100);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, 100);
         }
         //Y,-0.1
         private void button36_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), -0.1);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, -0.1);
         }
         //Y,-1
         private void button35_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), -1);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, -1);
         }
         //Y,-10
         private void button34_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), -10);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, -10);
         }
         //Y,-100
         private void button33_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), -100);
+            Zhilin_Weizhigaibian("Y", Bianliang.Y_Sudu, -100);
         }
         //Z,0.1
         private void button46_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), 0.1);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, 0.1);
         }
         //Z,1
         private void button47_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), 1);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, 1);
         }
         //Z,10
         private void button48_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), 10);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, 10);
         }
         //Z,100
         private void button49_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), 100);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, 100);
         }
         //Z,-0.1
         private void button45_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), -0.1);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, -0.1);
         }
         //Z,-1
         private void button44_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), -1);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, -1);
         }
         //Z,-10
         private void button43_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), -10);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, -10);
         }
         //Z,-100
         private void button42_Click(object sender, EventArgs e)
         {
-            Zhilin_Weizhigaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), -100);
+            Zhilin_Weizhigaibian("Z", Bianliang.Z_Sudu, -100);
         }
 
 
@@ -679,68 +608,44 @@ namespace Six_axis_robot__master_computer
         //T0,1
         private void button56_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T0", Convert.ToDouble(label_E0_Sudu.Text), 1);
+            Zhilin_T0T1_Weizhigaibian("T0", Bianliang.E0_Sudu, 1);
         }
         //T0,0.1
         private void button55_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T0", Convert.ToDouble(label_E0_Sudu.Text), 0.1);
+            Zhilin_T0T1_Weizhigaibian("T0", Bianliang.E0_Sudu, 0.1);
         }
         //T0,-0.1
         private void button54_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T0", Convert.ToDouble(label_E0_Sudu.Text), -0.1);
+            Zhilin_T0T1_Weizhigaibian("T0", Bianliang.E0_Sudu, -0.1);
         }
         //T0,-1
         private void button53_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T0", Convert.ToDouble(label_E0_Sudu.Text), -1);
+            Zhilin_T0T1_Weizhigaibian("T0", Bianliang.E0_Sudu, -1);
         }
         //T1,1
         private void button65_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T1", Convert.ToDouble(label_E1_Sudu.Text), 1);
+            Zhilin_T0T1_Weizhigaibian("T1", Bianliang.E1_Sudu, 1);
         }
         //T1,0.1
         private void button64_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T1", Convert.ToDouble(label_E1_Sudu.Text), 0.1);
+            Zhilin_T0T1_Weizhigaibian("T1", Bianliang.E1_Sudu, 0.1);
         }
         //T1,-0.1
         private void button63_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T1", Convert.ToDouble(label_E1_Sudu.Text), -0.1);
+            Zhilin_T0T1_Weizhigaibian("T1", Bianliang.E1_Sudu, -0.1);
         }
         //T1,-1
         private void button62_Click(object sender, EventArgs e)
         {
-            Zhilin_T0T1_Weizhigaibian("T1", Convert.ToDouble(label_E1_Sudu.Text), -1);
+            Zhilin_T0T1_Weizhigaibian("T1", Bianliang.E1_Sudu, -1);
         }
-        //修改X移动速度
-        private void button_Sudu_X_Click(object sender, EventArgs e)
-        {
-            label_X_Sudu.Text = textBox_Xuigaisudu_X.Text;
-        }
-        //修改Y移动速度
-        private void button_Sudu_Y_Click(object sender, EventArgs e)
-        {
-            label_Y_Sudu.Text = textBox_Xuigaisudu_Y.Text;
-        }
-        //修改Z移动速度
-        private void button_Sudu_Z_Click(object sender, EventArgs e)
-        {
-            label_Z_Sudu.Text = textBox_Xuigaisudu_Z.Text;
-        }
-        //修改E0移动速度
-        private void button_Sudu_E0_Click(object sender, EventArgs e)
-        {
-            label_E0_Sudu.Text = textBox_Xuigaisudu_E0.Text;
-        }
-        //修改E1移动速度
-        private void button_Sudu_E1_Click(object sender, EventArgs e)
-        {
-            label_E1_Sudu.Text = textBox_Xuigaisudu_E1.Text;
-        }
+
         //夹取命令
         private void button22_Click(object sender, EventArgs e)
         {
@@ -802,28 +707,19 @@ namespace Six_axis_robot__master_computer
 
             }
         }
-        //查询位置
+
         private void button19_Click(object sender, EventArgs e)
         {
-            if (!serialPort1.IsOpen) //如果没打开
-            {
-                MessageBox.Show("请先打开串口！", "Error");
-                return;
-            }
-            else
-            {
-                string Chaxun = "M114\r\n";
 
-                //serialPort1.WriteLine(Chaxun);    //串口写入数据   
-                serialPort1_shuchu(Chaxun);
-
-                this.textBox_zhukong.AppendText(Chaxun);
-            }
         }
 
+
+        
         //位置直接改变指令
-        private void Zhilin_Weizhizhijiegaibian(string XYZ, Double Sudu, Double Zhi)
+        public void Zhilin_Weizhizhijiegaibian(string XYZ, Double Sudu, Double Zhi)
         {
+
+
             if (!serialPort1.IsOpen) //如果没打开
             {
                 MessageBox.Show("请先打开串口！", "Error");
@@ -852,8 +748,13 @@ namespace Six_axis_robot__master_computer
                 }
             }
         }
+
+
+
+
         //T0T1位置直接改变指令
-        private void Zhilin_T0T1_Weizhizhijiegaibian(string T0T1, Double Sudu, Double Zhi)
+        //private 
+        public void Zhilin_T0T1_Weizhizhijiegaibian(string T0T1, Double Sudu, Double Zhi)
         {
             if (!serialPort1.IsOpen) //如果没打开
             {
@@ -878,40 +779,7 @@ namespace Six_axis_robot__master_computer
                 }
             }
         }
-        //x
-        private void button12_Click(object sender, EventArgs e)
-        {
-            Zhilin_Weizhizhijiegaibian("X", Convert.ToDouble(label_X_Sudu.Text), Convert.ToDouble(textBox_X_Sheding.Text));
-        }
-        //Y
-        private void button13_Click(object sender, EventArgs e)
-        {
-            Zhilin_Weizhizhijiegaibian("Y", Convert.ToDouble(label_Y_Sudu.Text), Convert.ToDouble(textBox_Y_Sheding.Text));
-        }
-        //z
-        private void button14_Click(object sender, EventArgs e)
-        {
-            Zhilin_Weizhizhijiegaibian("Z", Convert.ToDouble(label_Z_Sudu.Text), Convert.ToDouble(textBox_Z_Sheding.Text));
-        }
-        //E0
-        private void button15_Click(object sender, EventArgs e)
-        {
-            Zhilin_T0T1_Weizhizhijiegaibian("T0", Convert.ToDouble(label_E0_Sudu.Text), Convert.ToDouble(textBox_E0_Sheding.Text));
-        }
-        //E1
-        private void button16_Click(object sender, EventArgs e)
-        {
-            Zhilin_T0T1_Weizhizhijiegaibian("T1", Convert.ToDouble(label_E1_Sudu.Text), Convert.ToDouble(textBox_E1_Sheding.Text));
-        }
 
-        private void button18_Click(object sender, EventArgs e)
-        {
-            button12.PerformClick();
-            button13.PerformClick();
-            button14.PerformClick();
-            button15.PerformClick();
-            button16.PerformClick();
-        }
         //记录机械臂位置
         private void button69_Click(object sender, EventArgs e)
         {
@@ -1051,6 +919,61 @@ namespace Six_axis_robot__master_computer
         private void GroupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_shuxing_Click(object sender, EventArgs e)
+        {
+            Form_Shuxing f = new Form_Shuxing();
+            f.Owner = this; //设置查找窗体的父窗体为本窗体
+            f.ShowDialog();
+        }
+        //查询更新位置
+        private void Button_weizhigengxin_Click(object sender, EventArgs e)
+        {
+            if (!serialPort1.IsOpen) //如果没打开
+            {
+                MessageBox.Show("请先打开串口！", "Error");
+                return;
+            }
+            else
+            {
+                string Chaxun = "M114\r\n";
+
+                //serialPort1.WriteLine(Chaxun);    //串口写入数据   
+                serialPort1_shuchu(Chaxun);
+
+                this.textBox_zhukong.AppendText(Chaxun);
+            }
         }
     }
 

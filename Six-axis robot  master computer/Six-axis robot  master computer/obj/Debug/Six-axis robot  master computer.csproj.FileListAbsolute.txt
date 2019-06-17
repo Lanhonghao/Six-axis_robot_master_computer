@@ -18,3 +18,4 @@ D:\OneDrive\OneDrive - mail.sdufe.edu.cn\Github\Six-axis-robot-master-computer\S
 D:\OneDrive\OneDrive - mail.sdufe.edu.cn\Github\Six-axis-robot-master-computer\Six-axis robot  master computer\Six-axis robot  master computer\obj\Debug\Six-axis robot  master computer.csproj.CoreCompileInputs.cache
 D:\OneDrive\OneDrive - mail.sdufe.edu.cn\Github\Six-axis-robot-master-computer\Six-axis robot  master computer\Six-axis robot  master computer\obj\Debug\Six-axis robot  master computer.exe
 D:\OneDrive\OneDrive - mail.sdufe.edu.cn\Github\Six-axis-robot-master-computer\Six-axis robot  master computer\Six-axis robot  master computer\obj\Debug\Six-axis robot  master computer.pdb
+D:\OneDrive\OneDrive - mail.sdufe.edu.cn\Github\Six-axis-robot-master-computer\Six-axis robot  master computer\Six-axis robot  master computer\obj\Debug\Six_axis_robot__master_computer.Form_Shuxing.resources

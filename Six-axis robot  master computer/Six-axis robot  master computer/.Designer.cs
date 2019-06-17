@@ -33,31 +33,6 @@
             this.textBox_zhukong = new System.Windows.Forms.TextBox();
             this.textBox_Send = new System.Windows.Forms.TextBox();
             this.button_Fasong = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_X_Sheding = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox_Y_Sheding = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox_Z_Sheding = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox_E0_Sheding = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox_E1_Sheding = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,10 +45,6 @@
             this.label_Weizhi_Y = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label_Weizhi_X = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -134,32 +105,6 @@
             this.button73 = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button_Sudu_E1 = new System.Windows.Forms.Button();
-            this.button_Sudu_E0 = new System.Windows.Forms.Button();
-            this.button_Sudu_Z = new System.Windows.Forms.Button();
-            this.button_Sudu_Y = new System.Windows.Forms.Button();
-            this.button_Sudu_X = new System.Windows.Forms.Button();
-            this.textBox_Xuigaisudu_E1 = new System.Windows.Forms.TextBox();
-            this.textBox_Xuigaisudu_E0 = new System.Windows.Forms.TextBox();
-            this.textBox_Xuigaisudu_Z = new System.Windows.Forms.TextBox();
-            this.textBox_Xuigaisudu_Y = new System.Windows.Forms.TextBox();
-            this.textBox_Xuigaisudu_X = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label_E1_Sudu = new System.Windows.Forms.Label();
-            this.label_E0_Sudu = new System.Windows.Forms.Label();
-            this.label_Z_Sudu = new System.Windows.Forms.Label();
-            this.label_Y_Sudu = new System.Windows.Forms.Label();
-            this.label_X_Sudu = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label_Jiaqu = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -168,8 +113,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressBar_fasong = new System.Windows.Forms.ProgressBar();
+            this.button_shuxing = new System.Windows.Forms.Button();
+            this.button_weizhigengxin = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -178,7 +124,6 @@
             this.tabControl_Kongzhiwenjian.SuspendLayout();
             this.tabPage_Daochu.SuspendLayout();
             this.tabPage_Daoru.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -210,261 +155,6 @@
             this.button_Fasong.Text = "发送";
             this.button_Fasong.UseVisualStyleBackColor = true;
             this.button_Fasong.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(25, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 27);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "X";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(25, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 27);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Z";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(25, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 27);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Y";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(11, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 27);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "E0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(11, 171);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 27);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "E1";
-            // 
-            // textBox_X_Sheding
-            // 
-            this.textBox_X_Sheding.Location = new System.Drawing.Point(107, 21);
-            this.textBox_X_Sheding.Name = "textBox_X_Sheding";
-            this.textBox_X_Sheding.Size = new System.Drawing.Size(70, 21);
-            this.textBox_X_Sheding.TabIndex = 8;
-            this.textBox_X_Sheding.Text = "0";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(57, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(44, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(183, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(44, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(183, 59);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(44, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(57, 59);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(44, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // textBox_Y_Sheding
-            // 
-            this.textBox_Y_Sheding.Location = new System.Drawing.Point(107, 59);
-            this.textBox_Y_Sheding.Name = "textBox_Y_Sheding";
-            this.textBox_Y_Sheding.Size = new System.Drawing.Size(70, 21);
-            this.textBox_Y_Sheding.TabIndex = 15;
-            this.textBox_Y_Sheding.Text = "0";
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(183, 98);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(44, 23);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(57, 98);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(44, 23);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // textBox_Z_Sheding
-            // 
-            this.textBox_Z_Sheding.Location = new System.Drawing.Point(107, 98);
-            this.textBox_Z_Sheding.Name = "textBox_Z_Sheding";
-            this.textBox_Z_Sheding.Size = new System.Drawing.Size(70, 21);
-            this.textBox_Z_Sheding.TabIndex = 18;
-            this.textBox_Z_Sheding.Text = "0";
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button8.Location = new System.Drawing.Point(183, 136);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(44, 23);
-            this.button8.TabIndex = 23;
-            this.button8.Text = "-";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(57, 136);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(44, 23);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "+";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // textBox_E0_Sheding
-            // 
-            this.textBox_E0_Sheding.Location = new System.Drawing.Point(107, 136);
-            this.textBox_E0_Sheding.Name = "textBox_E0_Sheding";
-            this.textBox_E0_Sheding.Size = new System.Drawing.Size(70, 21);
-            this.textBox_E0_Sheding.TabIndex = 21;
-            this.textBox_E0_Sheding.Text = "0";
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(183, 173);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(44, 23);
-            this.button10.TabIndex = 26;
-            this.button10.Text = "-";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button11.Location = new System.Drawing.Point(57, 173);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(44, 23);
-            this.button11.TabIndex = 25;
-            this.button11.Text = "+";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // textBox_E1_Sheding
-            // 
-            this.textBox_E1_Sheding.Location = new System.Drawing.Point(107, 173);
-            this.textBox_E1_Sheding.Name = "textBox_E1_Sheding";
-            this.textBox_E1_Sheding.Size = new System.Drawing.Size(70, 21);
-            this.textBox_E1_Sheding.TabIndex = 24;
-            this.textBox_E1_Sheding.Text = "0";
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button12.Location = new System.Drawing.Point(233, 23);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(71, 23);
-            this.button12.TabIndex = 27;
-            this.button12.Text = "设置X";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button13.Location = new System.Drawing.Point(233, 59);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(71, 23);
-            this.button13.TabIndex = 28;
-            this.button13.Text = "设置Y";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button14
-            // 
-            this.button14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button14.Location = new System.Drawing.Point(233, 98);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(71, 23);
-            this.button14.TabIndex = 29;
-            this.button14.Text = "设置Z";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button15.Location = new System.Drawing.Point(233, 136);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(71, 23);
-            this.button15.TabIndex = 30;
-            this.button15.Text = "设置E0";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button16.Location = new System.Drawing.Point(233, 173);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(71, 23);
-            this.button16.TabIndex = 31;
-            this.button16.Text = "设置E1";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // label6
             // 
@@ -518,6 +208,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_weizhigengxin);
             this.groupBox1.Controls.Add(this.label_Weizhi_E1);
             this.groupBox1.Controls.Add(this.label_Weizhi_E0);
             this.groupBox1.Controls.Add(this.label_Weizhi_Z);
@@ -529,9 +220,9 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(392, 70);
+            this.groupBox1.Location = new System.Drawing.Point(345, 70);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(180, 210);
+            this.groupBox1.Size = new System.Drawing.Size(227, 210);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "实时位置反馈";
@@ -595,73 +286,6 @@
             this.label_Weizhi_X.Size = new System.Drawing.Size(26, 27);
             this.label_Weizhi_X.TabIndex = 37;
             this.label_Weizhi_X.Text = "0";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button19);
-            this.groupBox2.Controls.Add(this.button18);
-            this.groupBox2.Controls.Add(this.button17);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.button16);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.button15);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button14);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.button13);
-            this.groupBox2.Controls.Add(this.textBox_X_Sheding);
-            this.groupBox2.Controls.Add(this.button12);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.textBox_Y_Sheding);
-            this.groupBox2.Controls.Add(this.textBox_E1_Sheding);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.textBox_Z_Sheding);
-            this.groupBox2.Controls.Add(this.textBox_E0_Sheding);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Location = new System.Drawing.Point(12, 70);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(374, 210);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "位置设定";
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(310, 148);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(58, 46);
-            this.button19.TabIndex = 34;
-            this.button19.Text = "查询位置";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(310, 79);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(58, 57);
-            this.button18.TabIndex = 33;
-            this.button18.Text = "全部设定";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(310, 23);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(58, 49);
-            this.button17.TabIndex = 32;
-            this.button17.Text = "全部设置零点";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // groupBox3
             // 
@@ -1307,285 +931,6 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button_Sudu_E1);
-            this.groupBox6.Controls.Add(this.button_Sudu_E0);
-            this.groupBox6.Controls.Add(this.button_Sudu_Z);
-            this.groupBox6.Controls.Add(this.button_Sudu_Y);
-            this.groupBox6.Controls.Add(this.button_Sudu_X);
-            this.groupBox6.Controls.Add(this.textBox_Xuigaisudu_E1);
-            this.groupBox6.Controls.Add(this.textBox_Xuigaisudu_E0);
-            this.groupBox6.Controls.Add(this.textBox_Xuigaisudu_Z);
-            this.groupBox6.Controls.Add(this.textBox_Xuigaisudu_Y);
-            this.groupBox6.Controls.Add(this.textBox_Xuigaisudu_X);
-            this.groupBox6.Controls.Add(this.label42);
-            this.groupBox6.Controls.Add(this.label41);
-            this.groupBox6.Controls.Add(this.label40);
-            this.groupBox6.Controls.Add(this.label39);
-            this.groupBox6.Controls.Add(this.label38);
-            this.groupBox6.Controls.Add(this.label_E1_Sudu);
-            this.groupBox6.Controls.Add(this.label_E0_Sudu);
-            this.groupBox6.Controls.Add(this.label_Z_Sudu);
-            this.groupBox6.Controls.Add(this.label_Y_Sudu);
-            this.groupBox6.Controls.Add(this.label_X_Sudu);
-            this.groupBox6.Controls.Add(this.label33);
-            this.groupBox6.Controls.Add(this.label32);
-            this.groupBox6.Controls.Add(this.label31);
-            this.groupBox6.Controls.Add(this.label30);
-            this.groupBox6.Controls.Add(this.label29);
-            this.groupBox6.Location = new System.Drawing.Point(13, 524);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(271, 133);
-            this.groupBox6.TabIndex = 47;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "移动速度";
-            // 
-            // button_Sudu_E1
-            // 
-            this.button_Sudu_E1.Location = new System.Drawing.Point(209, 106);
-            this.button_Sudu_E1.Name = "button_Sudu_E1";
-            this.button_Sudu_E1.Size = new System.Drawing.Size(56, 24);
-            this.button_Sudu_E1.TabIndex = 69;
-            this.button_Sudu_E1.Text = "设置E1";
-            this.button_Sudu_E1.UseVisualStyleBackColor = true;
-            this.button_Sudu_E1.Click += new System.EventHandler(this.button_Sudu_E1_Click);
-            // 
-            // button_Sudu_E0
-            // 
-            this.button_Sudu_E0.Location = new System.Drawing.Point(209, 84);
-            this.button_Sudu_E0.Name = "button_Sudu_E0";
-            this.button_Sudu_E0.Size = new System.Drawing.Size(56, 24);
-            this.button_Sudu_E0.TabIndex = 68;
-            this.button_Sudu_E0.Text = "设置E0";
-            this.button_Sudu_E0.UseVisualStyleBackColor = true;
-            this.button_Sudu_E0.Click += new System.EventHandler(this.button_Sudu_E0_Click);
-            // 
-            // button_Sudu_Z
-            // 
-            this.button_Sudu_Z.Location = new System.Drawing.Point(209, 62);
-            this.button_Sudu_Z.Name = "button_Sudu_Z";
-            this.button_Sudu_Z.Size = new System.Drawing.Size(56, 24);
-            this.button_Sudu_Z.TabIndex = 67;
-            this.button_Sudu_Z.Text = "设置Z";
-            this.button_Sudu_Z.UseVisualStyleBackColor = true;
-            this.button_Sudu_Z.Click += new System.EventHandler(this.button_Sudu_Z_Click);
-            // 
-            // button_Sudu_Y
-            // 
-            this.button_Sudu_Y.Location = new System.Drawing.Point(209, 40);
-            this.button_Sudu_Y.Name = "button_Sudu_Y";
-            this.button_Sudu_Y.Size = new System.Drawing.Size(56, 24);
-            this.button_Sudu_Y.TabIndex = 66;
-            this.button_Sudu_Y.Text = "设置Y";
-            this.button_Sudu_Y.UseVisualStyleBackColor = true;
-            this.button_Sudu_Y.Click += new System.EventHandler(this.button_Sudu_Y_Click);
-            // 
-            // button_Sudu_X
-            // 
-            this.button_Sudu_X.Location = new System.Drawing.Point(209, 16);
-            this.button_Sudu_X.Name = "button_Sudu_X";
-            this.button_Sudu_X.Size = new System.Drawing.Size(56, 24);
-            this.button_Sudu_X.TabIndex = 65;
-            this.button_Sudu_X.Text = "设置X";
-            this.button_Sudu_X.UseVisualStyleBackColor = true;
-            this.button_Sudu_X.Click += new System.EventHandler(this.button_Sudu_X_Click);
-            // 
-            // textBox_Xuigaisudu_E1
-            // 
-            this.textBox_Xuigaisudu_E1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Xuigaisudu_E1.Location = new System.Drawing.Point(148, 109);
-            this.textBox_Xuigaisudu_E1.Name = "textBox_Xuigaisudu_E1";
-            this.textBox_Xuigaisudu_E1.Size = new System.Drawing.Size(55, 21);
-            this.textBox_Xuigaisudu_E1.TabIndex = 64;
-            this.textBox_Xuigaisudu_E1.Text = "100";
-            // 
-            // textBox_Xuigaisudu_E0
-            // 
-            this.textBox_Xuigaisudu_E0.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Xuigaisudu_E0.Location = new System.Drawing.Point(148, 87);
-            this.textBox_Xuigaisudu_E0.Name = "textBox_Xuigaisudu_E0";
-            this.textBox_Xuigaisudu_E0.Size = new System.Drawing.Size(55, 21);
-            this.textBox_Xuigaisudu_E0.TabIndex = 63;
-            this.textBox_Xuigaisudu_E0.Text = "100";
-            // 
-            // textBox_Xuigaisudu_Z
-            // 
-            this.textBox_Xuigaisudu_Z.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Xuigaisudu_Z.Location = new System.Drawing.Point(148, 65);
-            this.textBox_Xuigaisudu_Z.Name = "textBox_Xuigaisudu_Z";
-            this.textBox_Xuigaisudu_Z.Size = new System.Drawing.Size(55, 21);
-            this.textBox_Xuigaisudu_Z.TabIndex = 62;
-            this.textBox_Xuigaisudu_Z.Text = "100";
-            // 
-            // textBox_Xuigaisudu_Y
-            // 
-            this.textBox_Xuigaisudu_Y.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Xuigaisudu_Y.Location = new System.Drawing.Point(148, 43);
-            this.textBox_Xuigaisudu_Y.Name = "textBox_Xuigaisudu_Y";
-            this.textBox_Xuigaisudu_Y.Size = new System.Drawing.Size(55, 21);
-            this.textBox_Xuigaisudu_Y.TabIndex = 61;
-            this.textBox_Xuigaisudu_Y.Text = "3000";
-            // 
-            // textBox_Xuigaisudu_X
-            // 
-            this.textBox_Xuigaisudu_X.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Xuigaisudu_X.Location = new System.Drawing.Point(148, 19);
-            this.textBox_Xuigaisudu_X.Name = "textBox_Xuigaisudu_X";
-            this.textBox_Xuigaisudu_X.Size = new System.Drawing.Size(55, 21);
-            this.textBox_Xuigaisudu_X.TabIndex = 60;
-            this.textBox_Xuigaisudu_X.Text = "1000";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label42.Location = new System.Drawing.Point(86, 108);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(56, 16);
-            this.label42.TabIndex = 59;
-            this.label42.Text = "mm/min";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label41.Location = new System.Drawing.Point(86, 86);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(56, 16);
-            this.label41.TabIndex = 58;
-            this.label41.Text = "mm/min";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label40.Location = new System.Drawing.Point(86, 42);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(56, 16);
-            this.label40.TabIndex = 57;
-            this.label40.Text = "mm/min";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label39.Location = new System.Drawing.Point(86, 64);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(56, 16);
-            this.label39.TabIndex = 56;
-            this.label39.Text = "mm/min";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label38.Location = new System.Drawing.Point(86, 18);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(56, 16);
-            this.label38.TabIndex = 55;
-            this.label38.Text = "mm/min";
-            // 
-            // label_E1_Sudu
-            // 
-            this.label_E1_Sudu.AutoSize = true;
-            this.label_E1_Sudu.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_E1_Sudu.Location = new System.Drawing.Point(43, 108);
-            this.label_E1_Sudu.Name = "label_E1_Sudu";
-            this.label_E1_Sudu.Size = new System.Drawing.Size(32, 16);
-            this.label_E1_Sudu.TabIndex = 54;
-            this.label_E1_Sudu.Text = "100";
-            // 
-            // label_E0_Sudu
-            // 
-            this.label_E0_Sudu.AutoSize = true;
-            this.label_E0_Sudu.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_E0_Sudu.Location = new System.Drawing.Point(44, 86);
-            this.label_E0_Sudu.Name = "label_E0_Sudu";
-            this.label_E0_Sudu.Size = new System.Drawing.Size(32, 16);
-            this.label_E0_Sudu.TabIndex = 53;
-            this.label_E0_Sudu.Text = "100";
-            // 
-            // label_Z_Sudu
-            // 
-            this.label_Z_Sudu.AutoSize = true;
-            this.label_Z_Sudu.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_Z_Sudu.Location = new System.Drawing.Point(43, 64);
-            this.label_Z_Sudu.Name = "label_Z_Sudu";
-            this.label_Z_Sudu.Size = new System.Drawing.Size(32, 16);
-            this.label_Z_Sudu.TabIndex = 52;
-            this.label_Z_Sudu.Text = "100";
-            // 
-            // label_Y_Sudu
-            // 
-            this.label_Y_Sudu.AutoSize = true;
-            this.label_Y_Sudu.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_Y_Sudu.Location = new System.Drawing.Point(44, 43);
-            this.label_Y_Sudu.Name = "label_Y_Sudu";
-            this.label_Y_Sudu.Size = new System.Drawing.Size(40, 16);
-            this.label_Y_Sudu.TabIndex = 51;
-            this.label_Y_Sudu.Text = "3000";
-            // 
-            // label_X_Sudu
-            // 
-            this.label_X_Sudu.AutoSize = true;
-            this.label_X_Sudu.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_X_Sudu.Location = new System.Drawing.Point(44, 18);
-            this.label_X_Sudu.Name = "label_X_Sudu";
-            this.label_X_Sudu.Size = new System.Drawing.Size(40, 16);
-            this.label_X_Sudu.TabIndex = 50;
-            this.label_X_Sudu.Text = "1000";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label33.Location = new System.Drawing.Point(5, 108);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 16);
-            this.label33.TabIndex = 49;
-            this.label33.Text = "E1:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label32.Location = new System.Drawing.Point(6, 86);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(32, 16);
-            this.label32.TabIndex = 48;
-            this.label32.Text = "E0:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.Location = new System.Drawing.Point(13, 42);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(24, 16);
-            this.label31.TabIndex = 47;
-            this.label31.Text = "Y:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label30.Location = new System.Drawing.Point(13, 64);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(24, 16);
-            this.label30.TabIndex = 46;
-            this.label30.Text = "Z:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(14, 18);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(24, 16);
-            this.label29.TabIndex = 45;
-            this.label29.Text = "X:";
-            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.label_Jiaqu);
@@ -1667,33 +1012,49 @@
             this.progressBar_fasong.Size = new System.Drawing.Size(1155, 23);
             this.progressBar_fasong.TabIndex = 90;
             // 
+            // button_shuxing
+            // 
+            this.button_shuxing.Location = new System.Drawing.Point(12, 71);
+            this.button_shuxing.Name = "button_shuxing";
+            this.button_shuxing.Size = new System.Drawing.Size(75, 23);
+            this.button_shuxing.TabIndex = 91;
+            this.button_shuxing.Text = "属性修改";
+            this.button_shuxing.UseVisualStyleBackColor = true;
+            this.button_shuxing.Click += new System.EventHandler(this.Button_shuxing_Click);
+            // 
+            // button_weizhigengxin
+            // 
+            this.button_weizhigengxin.Location = new System.Drawing.Point(145, 20);
+            this.button_weizhigengxin.Name = "button_weizhigengxin";
+            this.button_weizhigengxin.Size = new System.Drawing.Size(75, 23);
+            this.button_weizhigengxin.TabIndex = 92;
+            this.button_weizhigengxin.Text = "位置更新";
+            this.button_weizhigengxin.UseVisualStyleBackColor = true;
+            this.button_weizhigengxin.Click += new System.EventHandler(this.Button_weizhigengxin_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 693);
+            this.Controls.Add(this.button_shuxing);
             this.Controls.Add(this.progressBar_fasong);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox9);
-            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Main";
             this.Text = " MOLAB六轴机械臂上位机";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1708,8 +1069,6 @@
             this.tabPage_Daochu.PerformLayout();
             this.tabPage_Daoru.ResumeLayout(false);
             this.tabPage_Daoru.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1723,31 +1082,6 @@
         private System.Windows.Forms.TextBox textBox_zhukong;
         private System.Windows.Forms.TextBox textBox_Send;
         private System.Windows.Forms.Button button_Fasong;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox_X_Sheding;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox_Y_Sheding;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox_Z_Sheding;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox_E0_Sheding;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.TextBox textBox_E1_Sheding;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1760,10 +1094,6 @@
         private System.Windows.Forms.Label label_Weizhi_Y;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label_Weizhi_X;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label17;
@@ -1820,32 +1150,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button62;
         private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button_Sudu_E1;
-        private System.Windows.Forms.Button button_Sudu_E0;
-        private System.Windows.Forms.Button button_Sudu_Z;
-        private System.Windows.Forms.Button button_Sudu_Y;
-        private System.Windows.Forms.Button button_Sudu_X;
-        private System.Windows.Forms.TextBox textBox_Xuigaisudu_E1;
-        private System.Windows.Forms.TextBox textBox_Xuigaisudu_E0;
-        private System.Windows.Forms.TextBox textBox_Xuigaisudu_Z;
-        private System.Windows.Forms.TextBox textBox_Xuigaisudu_Y;
-        private System.Windows.Forms.TextBox textBox_Xuigaisudu_X;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label_E1_Sudu;
-        private System.Windows.Forms.Label label_E0_Sudu;
-        private System.Windows.Forms.Label label_Z_Sudu;
-        private System.Windows.Forms.Label label_Y_Sudu;
-        private System.Windows.Forms.Label label_X_Sudu;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button button_Jia;
         private System.Windows.Forms.Button button_Fang;
         private System.Windows.Forms.GroupBox groupBox9;
@@ -1858,6 +1162,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar_fasong;
+        private System.Windows.Forms.Button button_shuxing;
+        private System.Windows.Forms.Button button_weizhigengxin;
     }
 }
 

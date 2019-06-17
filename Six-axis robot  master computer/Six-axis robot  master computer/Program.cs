@@ -22,6 +22,8 @@ namespace Six_axis_robot__master_computer
         }
 
     }
-  
+
+
+
 }
 
