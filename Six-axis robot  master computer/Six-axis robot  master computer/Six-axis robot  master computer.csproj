@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class_Bianliang.cs" />
+    <Compile Include="Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_About.Designer.cs">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Help.Designer.cs">
+      <DependentUpon>Form_Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Qidong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_About.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Help.resx">
+      <DependentUpon>Form_Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Qidong.resx">
       <DependentUpon>Form_Qidong.cs</DependentUpon>
     </EmbeddedResource>

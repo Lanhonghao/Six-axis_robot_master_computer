@@ -975,6 +975,76 @@ namespace Six_axis_robot__master_computer
                 this.textBox_zhukong.AppendText(Chaxun);
             }
         }
+
+        private void 导入控制文件ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string file = "";
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Multiselect = false;//该值确定是否可以选择多个文件
+            dialog.Title = "请选择.G228文件";
+            dialog.Filter = ".G228文件(*.G228*)|*.G228*";
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                file = dialog.FileName;
+            }
+            Read(file);
+            MessageBox.Show("控制文件导入成功");
+        }
+
+        private void 导出控制文件ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Double X_jieshu = -Convert.ToDouble(label_Weizhi_X.Text);
+            Double Y_jieshu = -Convert.ToDouble(label_Weizhi_Y.Text);
+            Double Z_jieshu = -Convert.ToDouble(label_Weizhi_Z.Text);
+            this.textBox_Daochu.AppendText(";[G228#" + P + "]");
+            string Weizhi = "G90\r\n" + "G1" + " " + "X" + X_jieshu + " " + "Y" + Y_jieshu + " " + "Z" + Z_jieshu + " " + "F" + "1000";
+            textBox_Daochu.AppendText(Weizhi);
+            textBox_Daochu.AppendText(Environment.NewLine);
+
+
+
+            var save = new SaveFileDialog();
+            save.Filter = "输出.G228文件 (*.G228)|*.G228";
+            save.FileName = "输出_" + DateTime.Now.ToString("yyyyMMddHHmmss");//年月日时分秒
+            if (save.ShowDialog() == DialogResult.OK && save.FileName != "")
+            {
+                var sw = new StreamWriter(save.FileName);
+                for (var i = 0; i < textBox_Daochu.Lines.Length; i++)
+                {
+                    sw.WriteLine(textBox_Daochu.Lines.GetValue(i).ToString());
+                }
+                sw.Close();
+            }
+            MessageBox.Show("控制文件保存成功");
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void 属性ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 属性修改ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Shuxing f = new Form_Shuxing();
+            f.Owner = this; //设置查找窗体的父窗体为本窗体
+            f.ShowDialog();
+        }
+
+        private void 关于ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_About w = new Form_About();
+            w.ShowDialog();
+        }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -39,6 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_weizhigengxin = new System.Windows.Forms.Button();
             this.label_Weizhi_E1 = new System.Windows.Forms.Label();
             this.label_Weizhi_E0 = new System.Windows.Forms.Label();
             this.label_Weizhi_Z = new System.Windows.Forms.Label();
@@ -111,10 +112,17 @@
             this.button22 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressBar_fasong = new System.Windows.Forms.ProgressBar();
-            this.button_shuxing = new System.Windows.Forms.Button();
-            this.button_weizhigengxin = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导入控制文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导出控制文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.属性ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.属性修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -125,6 +133,7 @@
             this.tabPage_Daochu.SuspendLayout();
             this.tabPage_Daoru.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,13 +229,23 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(345, 70);
+            this.groupBox1.Location = new System.Drawing.Point(299, 425);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(227, 210);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "实时位置反馈";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
+            // 
+            // button_weizhigengxin
+            // 
+            this.button_weizhigengxin.Location = new System.Drawing.Point(145, 20);
+            this.button_weizhigengxin.Name = "button_weizhigengxin";
+            this.button_weizhigengxin.Size = new System.Drawing.Size(75, 23);
+            this.button_weizhigengxin.TabIndex = 92;
+            this.button_weizhigengxin.Text = "位置更新";
+            this.button_weizhigengxin.UseVisualStyleBackColor = true;
+            this.button_weizhigengxin.Click += new System.EventHandler(this.Button_weizhigengxin_Click);
             // 
             // label_Weizhi_E1
             // 
@@ -293,7 +312,7 @@
             this.groupBox3.Controls.Add(this.textBox_zhukong);
             this.groupBox3.Controls.Add(this.textBox_Send);
             this.groupBox3.Controls.Add(this.button_Fasong);
-            this.groupBox3.Location = new System.Drawing.Point(578, 12);
+            this.groupBox3.Location = new System.Drawing.Point(576, 28);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(294, 609);
             this.groupBox3.TabIndex = 39;
@@ -317,7 +336,7 @@
             this.groupBox4.Controls.Add(this.button20);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Location = new System.Drawing.Point(12, 13);
+            this.groupBox4.Location = new System.Drawing.Point(12, 29);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(559, 52);
             this.groupBox4.TabIndex = 40;
@@ -432,7 +451,7 @@
             this.groupBox5.Controls.Add(this.button25);
             this.groupBox5.Controls.Add(this.button24);
             this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Location = new System.Drawing.Point(13, 285);
+            this.groupBox5.Location = new System.Drawing.Point(12, 185);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(558, 233);
             this.groupBox5.TabIndex = 41;
@@ -820,7 +839,7 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.tabControl_Kongzhiwenjian);
-            this.groupBox7.Location = new System.Drawing.Point(878, 13);
+            this.groupBox7.Location = new System.Drawing.Point(876, 29);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(290, 606);
             this.groupBox7.TabIndex = 43;
@@ -938,7 +957,7 @@
             this.groupBox9.Controls.Add(this.button22);
             this.groupBox9.Controls.Add(this.button_Jia);
             this.groupBox9.Controls.Add(this.button_Fang);
-            this.groupBox9.Location = new System.Drawing.Point(290, 525);
+            this.groupBox9.Location = new System.Drawing.Point(12, 425);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(281, 132);
             this.groupBox9.TabIndex = 86;
@@ -979,7 +998,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(966, 641);
+            this.label13.Location = new System.Drawing.Point(964, 657);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(191, 12);
             this.label13.TabIndex = 87;
@@ -989,55 +1008,108 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(673, 627);
+            this.label14.Location = new System.Drawing.Point(671, 643);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(271, 27);
             this.label14.TabIndex = 88;
             this.label14.Text = "MOLAB机械创新实验室";
             // 
+            // progressBar_fasong
+            // 
+            this.progressBar_fasong.Location = new System.Drawing.Point(11, 680);
+            this.progressBar_fasong.Name = "progressBar_fasong";
+            this.progressBar_fasong.Size = new System.Drawing.Size(1155, 23);
+            this.progressBar_fasong.TabIndex = 90;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.文件ToolStripMenuItem,
+            this.属性ToolStripMenuItem,
+            this.关于ToolStripMenuItem,
+            this.关于ToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1177, 25);
+            this.menuStrip1.TabIndex = 92;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 文件ToolStripMenuItem
+            // 
+            this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导入控制文件ToolStripMenuItem,
+            this.导出控制文件ToolStripMenuItem,
+            this.退出ToolStripMenuItem});
+            this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.文件ToolStripMenuItem.Text = "文件";
+            // 
+            // 导入控制文件ToolStripMenuItem
+            // 
+            this.导入控制文件ToolStripMenuItem.Name = "导入控制文件ToolStripMenuItem";
+            this.导入控制文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.导入控制文件ToolStripMenuItem.Text = "导入控制文件";
+            this.导入控制文件ToolStripMenuItem.Click += new System.EventHandler(this.导入控制文件ToolStripMenuItem_Click);
+            // 
+            // 导出控制文件ToolStripMenuItem
+            // 
+            this.导出控制文件ToolStripMenuItem.Name = "导出控制文件ToolStripMenuItem";
+            this.导出控制文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.导出控制文件ToolStripMenuItem.Text = "导出控制文件";
+            this.导出控制文件ToolStripMenuItem.Click += new System.EventHandler(this.导出控制文件ToolStripMenuItem_Click);
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            // 
+            // 属性ToolStripMenuItem
+            // 
+            this.属性ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.属性修改ToolStripMenuItem});
+            this.属性ToolStripMenuItem.Name = "属性ToolStripMenuItem";
+            this.属性ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.属性ToolStripMenuItem.Text = "编辑";
+            this.属性ToolStripMenuItem.Click += new System.EventHandler(this.属性ToolStripMenuItem_Click);
+            // 
+            // 属性修改ToolStripMenuItem
+            // 
+            this.属性修改ToolStripMenuItem.Name = "属性修改ToolStripMenuItem";
+            this.属性修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.属性修改ToolStripMenuItem.Text = "属性修改";
+            this.属性修改ToolStripMenuItem.Click += new System.EventHandler(this.属性修改ToolStripMenuItem_Click);
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.关于ToolStripMenuItem.Text = "帮助";
+            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            // 
+            // 关于ToolStripMenuItem1
+            // 
+            this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
+            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(44, 21);
+            this.关于ToolStripMenuItem1.Text = "关于";
+            this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Six_axis_robot__master_computer.Properties.Resources.实验室_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(591, 621);
+            this.pictureBox1.Location = new System.Drawing.Point(589, 637);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 36);
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
-            // progressBar_fasong
-            // 
-            this.progressBar_fasong.Location = new System.Drawing.Point(13, 664);
-            this.progressBar_fasong.Name = "progressBar_fasong";
-            this.progressBar_fasong.Size = new System.Drawing.Size(1155, 23);
-            this.progressBar_fasong.TabIndex = 90;
-            // 
-            // button_shuxing
-            // 
-            this.button_shuxing.Location = new System.Drawing.Point(12, 71);
-            this.button_shuxing.Name = "button_shuxing";
-            this.button_shuxing.Size = new System.Drawing.Size(75, 23);
-            this.button_shuxing.TabIndex = 91;
-            this.button_shuxing.Text = "属性修改";
-            this.button_shuxing.UseVisualStyleBackColor = true;
-            this.button_shuxing.Click += new System.EventHandler(this.Button_shuxing_Click);
-            // 
-            // button_weizhigengxin
-            // 
-            this.button_weizhigengxin.Location = new System.Drawing.Point(145, 20);
-            this.button_weizhigengxin.Name = "button_weizhigengxin";
-            this.button_weizhigengxin.Size = new System.Drawing.Size(75, 23);
-            this.button_weizhigengxin.TabIndex = 92;
-            this.button_weizhigengxin.Text = "位置更新";
-            this.button_weizhigengxin.UseVisualStyleBackColor = true;
-            this.button_weizhigengxin.Click += new System.EventHandler(this.Button_weizhigengxin_Click);
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 693);
-            this.Controls.Add(this.button_shuxing);
+            this.ClientSize = new System.Drawing.Size(1177, 716);
             this.Controls.Add(this.progressBar_fasong);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
@@ -1048,8 +1120,10 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_Main";
             this.Text = " MOLAB六轴机械臂上位机";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1071,6 +1145,8 @@
             this.tabPage_Daoru.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1162,8 +1238,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar_fasong;
-        private System.Windows.Forms.Button button_shuxing;
         private System.Windows.Forms.Button button_weizhigengxin;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导入控制文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导出控制文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 属性ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 属性修改ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
     }
 }
 
