@@ -15,5 +15,15 @@ namespace Six_axis_robot__master_computer
         {
             InitializeComponent();
         }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_Help_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

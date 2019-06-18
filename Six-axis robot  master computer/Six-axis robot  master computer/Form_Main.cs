@@ -656,7 +656,7 @@ namespace Six_axis_robot__master_computer
             }
             else
             {
-                string Jia = "M280 P0 S80\r\n";
+                string Jia = "M280 P0 S"+textBox_Jiaoduzhi.Text+"\r\n";
 
                 //serialPort1.WriteLine(Jia);    //串口写入数据  
                 serialPort1_shuchu(Jia);
@@ -1041,9 +1041,20 @@ namespace Six_axis_robot__master_computer
             w.ShowDialog();
         }
 
-        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GroupBox9_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Label_Jiaqu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Help w = new Form_Help();
+            w.ShowDialog();
         }
     }
 
