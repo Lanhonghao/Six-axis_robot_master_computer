@@ -960,6 +960,7 @@ namespace Six_axis_robot__master_computer
         //查询更新位置
         private void Button_weizhigengxin_Click(object sender, EventArgs e)
         {
+            Weizhi_jiancegengxin();
             if (!serialPort1.IsOpen) //如果没打开
             {
                 MessageBox.Show("请先打开串口！", "Error");
@@ -975,6 +976,90 @@ namespace Six_axis_robot__master_computer
                 this.textBox_zhukong.AppendText(Chaxun);
             }
         }
+
+        //输入位置检测，用于位置更新
+        private void Weizhi_jiancegengxin()
+        {
+            string str = textBox_Send.Text;//输入文本
+
+            //MessageBox.Show(str);//测试，调试
+
+            byte[] byte_A = Encoding.ASCII.GetBytes(str);//转换为数组byte型
+
+            //MessageBox.Show(System.Text.Encoding.ASCII.GetString(byte_A));//测试，调试
+           
+            int Out = 0;
+            for (int i = 0; i < byte_A.Length && Out==0 ; i++)
+            {
+                int A = byte_A[i];
+
+                MessageBox.Show("c");//测试，调试
+
+                if (A == 'a')
+                {
+                    MessageBox.Show("out");//测试，调试
+                    Out = 1;
+                }
+                else
+                {
+                    
+                    if (A == 'X')
+                    {
+                        MessageBox.Show("X成功");//测试，调试
+
+                        for (int n=i; n < byte_A.Length; n++)
+                        {
+                            MessageBox.Show("shadiao1");//测试，调试
+
+                            int B = byte_A[n];
+                            if (B == ' ' )
+                            {
+                                MessageBox.Show("shadiao2");//测试，调试
+
+                                byte[] a2 = new byte[10];
+                                for (int k = 0; k < 10 && k < (n-i); k++)
+                                {
+                                    a2[k] = byte_A[i+k+1];
+                                }                               
+                                string X_sudu_str = System.Text.Encoding.ASCII.GetString(a2);
+                                this.textBox_zhukong.AppendText(X_sudu_str);
+
+                                MessageBox.Show(X_sudu_str);//测试，调试
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void lingweijiance()
+        {
+            for (int n = i; n < byte_A.Length; n++)
+            {
+                MessageBox.Show("shadiao1");//测试，调试
+
+                int B = byte_A[n];
+                if (B == ' ')
+                {
+                    MessageBox.Show("shadiao2");//测试，调试
+
+                    byte[] a2 = new byte[10];
+                    for (int k = 0; k < 10 && k < (n - i); k++)
+                    {
+                        a2[k] = byte_A[i + k + 1];
+                    }
+                    string X_sudu_str = System.Text.Encoding.ASCII.GetString(a2);
+                    this.textBox_zhukong.AppendText(X_sudu_str);
+
+                    MessageBox.Show(X_sudu_str);//测试，调试
+                }
+
+            }
+
+        }
+
 
         private void 导入控制文件ToolStripMenuItem_Click(object sender, EventArgs e)
         {
