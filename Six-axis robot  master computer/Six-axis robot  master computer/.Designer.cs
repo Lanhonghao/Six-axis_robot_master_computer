@@ -39,13 +39,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_weizhigengxin = new System.Windows.Forms.Button();
             this.label_Weizhi_E1 = new System.Windows.Forms.Label();
             this.label_Weizhi_E0 = new System.Windows.Forms.Label();
             this.label_Weizhi_Z = new System.Windows.Forms.Label();
+            this.label_huifu = new System.Windows.Forms.Label();
             this.label_Weizhi_Y = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label_Weizhi_X = new System.Windows.Forms.Label();
+            this.button_weizhigengxin = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -57,10 +58,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label_huifu = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button69 = new System.Windows.Forms.Button();
-            this.button68 = new System.Windows.Forms.Button();
             this.button62 = new System.Windows.Forms.Button();
             this.button63 = new System.Windows.Forms.Button();
             this.button64 = new System.Windows.Forms.Button();
@@ -92,6 +89,9 @@
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
             this.button_Jia = new System.Windows.Forms.Button();
             this.button_Fang = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -108,6 +108,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label_Jiaqu = new System.Windows.Forms.Label();
+            this.textBox_Jiaoduzhi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -125,8 +127,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Jiaoduzhi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -242,16 +242,6 @@
             this.groupBox1.Text = "实时位置反馈";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // button_weizhigengxin
-            // 
-            this.button_weizhigengxin.Location = new System.Drawing.Point(386, 242);
-            this.button_weizhigengxin.Name = "button_weizhigengxin";
-            this.button_weizhigengxin.Size = new System.Drawing.Size(179, 70);
-            this.button_weizhigengxin.TabIndex = 92;
-            this.button_weizhigengxin.Text = "位置更新";
-            this.button_weizhigengxin.UseVisualStyleBackColor = true;
-            this.button_weizhigengxin.Click += new System.EventHandler(this.Button_weizhigengxin_Click);
-            // 
             // label_Weizhi_E1
             // 
             this.label_Weizhi_E1.AutoSize = true;
@@ -282,6 +272,16 @@
             this.label_Weizhi_Z.TabIndex = 40;
             this.label_Weizhi_Z.Text = "0";
             // 
+            // label_huifu
+            // 
+            this.label_huifu.AutoSize = true;
+            this.label_huifu.Location = new System.Drawing.Point(207, 114);
+            this.label_huifu.Name = "label_huifu";
+            this.label_huifu.Size = new System.Drawing.Size(119, 12);
+            this.label_huifu.TabIndex = 85;
+            this.label_huifu.Text = "恢复电机运行发送M17";
+            this.label_huifu.Visible = false;
+            // 
             // label_Weizhi_Y
             // 
             this.label_Weizhi_Y.AutoSize = true;
@@ -310,6 +310,16 @@
             this.label_Weizhi_X.Size = new System.Drawing.Size(26, 27);
             this.label_Weizhi_X.TabIndex = 37;
             this.label_Weizhi_X.Text = "0";
+            // 
+            // button_weizhigengxin
+            // 
+            this.button_weizhigengxin.Location = new System.Drawing.Point(386, 242);
+            this.button_weizhigengxin.Name = "button_weizhigengxin";
+            this.button_weizhigengxin.Size = new System.Drawing.Size(179, 70);
+            this.button_weizhigengxin.TabIndex = 92;
+            this.button_weizhigengxin.Text = "位置更新";
+            this.button_weizhigengxin.UseVisualStyleBackColor = true;
+            this.button_weizhigengxin.Click += new System.EventHandler(this.Button_weizhigengxin_Click);
             // 
             // groupBox3
             // 
@@ -458,52 +468,6 @@
             this.groupBox5.TabIndex = 41;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "机械臂调节";
-            // 
-            // label_huifu
-            // 
-            this.label_huifu.AutoSize = true;
-            this.label_huifu.Location = new System.Drawing.Point(207, 114);
-            this.label_huifu.Name = "label_huifu";
-            this.label_huifu.Size = new System.Drawing.Size(119, 12);
-            this.label_huifu.TabIndex = 85;
-            this.label_huifu.Text = "恢复电机运行发送M17";
-            this.label_huifu.Visible = false;
-            // 
-            // button23
-            // 
-            this.button23.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button23.Location = new System.Drawing.Point(13, 465);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(194, 64);
-            this.button23.TabIndex = 84;
-            this.button23.Text = "执行控制文件";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click_1);
-            // 
-            // button69
-            // 
-            this.button69.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button69.Location = new System.Drawing.Point(15, 76);
-            this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(168, 50);
-            this.button69.TabIndex = 83;
-            this.button69.Text = "记录当前位置";
-            this.button69.UseVisualStyleBackColor = true;
-            this.button69.Click += new System.EventHandler(this.button69_Click);
-            // 
-            // button68
-            // 
-            this.button68.BackColor = System.Drawing.Color.Red;
-            this.button68.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button68.Font = new System.Drawing.Font("宋体", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button68.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button68.Location = new System.Drawing.Point(369, 465);
-            this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(189, 105);
-            this.button68.TabIndex = 82;
-            this.button68.Text = "STOP";
-            this.button68.UseVisualStyleBackColor = false;
-            this.button68.Click += new System.EventHandler(this.button68_Click);
             // 
             // button62
             // 
@@ -815,6 +779,42 @@
             this.label19.TabIndex = 33;
             this.label19.Text = "X";
             // 
+            // button23
+            // 
+            this.button23.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button23.Location = new System.Drawing.Point(13, 465);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(194, 64);
+            this.button23.TabIndex = 84;
+            this.button23.Text = "执行控制文件";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click_1);
+            // 
+            // button69
+            // 
+            this.button69.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button69.Location = new System.Drawing.Point(15, 76);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(168, 50);
+            this.button69.TabIndex = 83;
+            this.button69.Text = "记录当前位置";
+            this.button69.UseVisualStyleBackColor = true;
+            this.button69.Click += new System.EventHandler(this.button69_Click);
+            // 
+            // button68
+            // 
+            this.button68.BackColor = System.Drawing.Color.Red;
+            this.button68.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button68.Font = new System.Drawing.Font("宋体", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button68.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button68.Location = new System.Drawing.Point(369, 465);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(189, 105);
+            this.button68.TabIndex = 82;
+            this.button68.Text = "STOP";
+            this.button68.UseVisualStyleBackColor = false;
+            this.button68.Click += new System.EventHandler(this.button68_Click);
+            // 
             // button_Jia
             // 
             this.button_Jia.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -978,6 +978,25 @@
             this.label_Jiaqu.Text = "未夹取";
             this.label_Jiaqu.Click += new System.EventHandler(this.Label_Jiaqu_Click);
             // 
+            // textBox_Jiaoduzhi
+            // 
+            this.textBox_Jiaoduzhi.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Jiaoduzhi.Location = new System.Drawing.Point(90, 66);
+            this.textBox_Jiaoduzhi.Name = "textBox_Jiaoduzhi";
+            this.textBox_Jiaoduzhi.Size = new System.Drawing.Size(50, 26);
+            this.textBox_Jiaoduzhi.TabIndex = 87;
+            this.textBox_Jiaoduzhi.Text = "80";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(25, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "角度值";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1081,7 +1100,7 @@
             // 属性修改ToolStripMenuItem
             // 
             this.属性修改ToolStripMenuItem.Name = "属性修改ToolStripMenuItem";
-            this.属性修改ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.属性修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.属性修改ToolStripMenuItem.Text = "属性修改";
             this.属性修改ToolStripMenuItem.Click += new System.EventHandler(this.属性修改ToolStripMenuItem_Click);
             // 
@@ -1129,25 +1148,6 @@
             this.button2.TabIndex = 94;
             this.button2.Text = "手轮控制模式";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(25, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
-            this.label1.TabIndex = 86;
-            this.label1.Text = "角度值";
-            // 
-            // textBox_Jiaoduzhi
-            // 
-            this.textBox_Jiaoduzhi.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Jiaoduzhi.Location = new System.Drawing.Point(90, 66);
-            this.textBox_Jiaoduzhi.Name = "textBox_Jiaoduzhi";
-            this.textBox_Jiaoduzhi.Size = new System.Drawing.Size(50, 26);
-            this.textBox_Jiaoduzhi.TabIndex = 87;
-            this.textBox_Jiaoduzhi.Text = "80";
             // 
             // Form_Main
             // 

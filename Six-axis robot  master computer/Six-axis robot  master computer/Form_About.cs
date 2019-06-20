@@ -40,5 +40,10 @@ namespace Six_axis_robot__master_computer
         {
             Close();
         }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
